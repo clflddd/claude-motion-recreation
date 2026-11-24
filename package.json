@@ -1,0 +1,27 @@
+{
+  "name": "claude-motion-recreation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A 30s motion-editor demo rebuilt frame-by-frame in Remotion, with a synthesized beat-synced soundtrack.",
+  "scripts": {
+    "dev": "remotion studio",
+    "start": "remotion studio",
+    "render": "remotion render ClaudeMotion out/claude-motion.mp4",
+    "still": "remotion still ClaudeMotion out/poster.png --frame=840",
+    "audio": "python scripts/make-beat.py",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.546",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.546"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.0",
+    "typescript": "5.7.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
